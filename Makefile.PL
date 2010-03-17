@@ -13,4 +13,13 @@ WriteMakefile(
                      'LWP'        => 0,
                     },
     ( $ExtUtils::MakeMaker::VERSION >= 6.3002 ? ('LICENSE' => 'gpl', ) : () ),
+
+    ( $ExtUtils::MakeMaker::VERSION >= 6.46 ? (
+        'META_MERGE' => {
+            resources => {
+                repository  =>      'http://github.com/makamaka/WWW-HostipInfo',
+            },
+        } ) : ()
+    ),
+
 );
