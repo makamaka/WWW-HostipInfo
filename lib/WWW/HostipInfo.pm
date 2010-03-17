@@ -104,13 +104,22 @@ sub _check_ipaddr {
 
 sub _set_info_to_obj {
 	my ( $self, $content ) = @_;
-	my ( $country_code, $city, $lat, $lon ) = (split/\n/,$content);
-    my ( $name, $code ) = $country_code =~ /^Country: (.+?) \(([A-Z][A-Z])\)$/;
-	my $region;
+	my ( $country_code, $city, $lat, $lon, $region, $name, $code );
 
-	($lat)  = $lat =~ /^Latitude: (.+)$/;
-	($lon)  = $lon =~ /^Longitude: (.+)$/;
-	($city, $region) = $city =~ /^City: ([^,]+)(?:, (\w+))?$/;
+    for my $line ( split/\n/, $content ) {
+        if ( $line =~ /^Country: (.+?) \(([A-Z][A-Z])\)$/ ) {
+            ( $name, $code ) = ( $1, $2 );
+        }
+        elsif ( $line =~ /^City: ([^,]+)(?:, (\w+))?$/ ) {
+            ($city, $region) = ( $1, $2 );
+        }
+        elsif ( $line =~ /^Latitude: (.+)$/ ) {
+            $lat = $1;
+        }
+        elsif ( $line =~ /^Longitude: (.+)$/ ) {
+            $lon = $1;
+        }
+    }
 
 	my ($unknown_city, $unknown_country) = (0,0);
 	if($city =~ /^\([uU]nknown [cC]ity/){
