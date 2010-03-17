@@ -1,5 +1,8 @@
 Revision history for Perl module WWW::HostipInfo
 
+X.XX Wed Mar 17 16:21:31 2010
+    - enhanced info parsing part
+
 0.10 Mon Nov  9 16:57:22 2009
     - changed API url.
     - remove guess() function.
