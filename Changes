@@ -1,5 +1,8 @@
 Revision history for Perl module WWW::HostipInfo
 
+0.12 Wed Mar 17 17:52:01 2010
+    - added missing META.yml
+
 0.11 Wed Mar 17 16:21:31 2010
     - enhanced info parsing part
 
