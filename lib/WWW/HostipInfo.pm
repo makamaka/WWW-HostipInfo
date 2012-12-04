@@ -6,7 +6,7 @@ use LWP::UserAgent;
 use Carp;
 use vars qw( $VERSION $DEBUG );
 
-$VERSION = '0.12';
+$VERSION = '0.13';
 
 my $GetAPI   = 'http://api.hostip.info/get_html.php?position=true&ip=';
 my $RoughAPI = 'http://api.hostip.info/get_html.php?position=true&ip=';
@@ -367,7 +367,7 @@ Makamaka Hannyaharamitu, E<lt>makamaka[at]cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2005, 2009 by Makamaka Hannyaharamitu
+Copyright 2005, 2009-2012 by Makamaka Hannyaharamitu
 
 This library is licensed under GNU GENERAL PUBLIC LICENSE
 

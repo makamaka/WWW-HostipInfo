@@ -1,5 +1,8 @@
 Revision history for Perl module WWW::HostipInfo
 
+0.13 Tue Dec  4 17:00:24 2012
+    - modified test file for the change of hostip.info ip
+
 0.12 Wed Mar 17 17:52:01 2010
     - added missing META.yml
 
