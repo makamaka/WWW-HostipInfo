@@ -6,7 +6,7 @@ use LWP::UserAgent;
 use Carp;
 use vars qw( $VERSION $DEBUG );
 
-$VERSION = '0.13';
+$VERSION = '0.14';
 
 my $GetAPI   = 'http://api.hostip.info/get_html.php?position=true&ip=';
 my $RoughAPI = 'http://api.hostip.info/get_html.php?position=true&ip=';

@@ -1,4 +1,4 @@
-use Test::More tests => 16;
+use Test::More tests => 15;
 use strict;
 use Socket;
 
@@ -23,10 +23,15 @@ is($ip, $info->ip);
 
 ok(! $info->is_private);
 ok(! $info->is_guessed);
-ok($info->has_unknown_city);
-ok($info->has_unknown_country);
 
-is($info->country_code, 'XX');
+if ( $info->country_code eq 'XX' ) {
+    ok($info->has_unknown_country);
+}
+else {
+    ok(!$info->has_unknown_country);
+}
+
+ok($info->country_code, $info->country_code);
 is($info->country_code, $info->code);
 is($info->country_name, $info->country);
 

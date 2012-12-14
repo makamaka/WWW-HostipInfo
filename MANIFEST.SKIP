@@ -4,6 +4,7 @@
 \.tar\.gz$
 \.git
 \.bak$
+\.shipit$
 blib/
 Makefile
 MANIFEST\.SKIP
